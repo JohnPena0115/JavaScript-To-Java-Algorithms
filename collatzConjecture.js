@@ -36,10 +36,24 @@ function collatzConjecturePath(number){
 
     }
 
+    if (steps === 1) {
+
+        pathSequence = `${number}`
+    }
+
     console.log(`\nThere are ${steps} steps in the Collatz Conjecture path for ${originalValue}.\n\nBelow is the path sequence:\n\n${pathSequence}`)
 }
  
 
- collatzConjecturePath(77)
+
+let iterations = 1 
+
+while (iterations <= 50) {
+
+    collatzConjecturePath(iterations)
+    iterations++
+
+}
+  
 
   
